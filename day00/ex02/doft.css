@@ -1,0 +1,133 @@
+body {
+    background-color: #505050;
+}
+.head_box {
+    position: relative;
+    background-color: #909090;
+    width: 1300px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 8px 10px 10px black;
+    padding: 5px;
+    margin: 0 auto;
+}
+.magnifier {
+    position: absolute;
+    right: 40px;
+    bottom: -20px;
+}
+.reload {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+.close {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+}
+.center_boxes{
+    margin: auto;
+    width: 1250px;
+    margin-top: 20px;
+    display: flex;
+}
+.cluster_box {
+    background-color: #909090;
+    width: 74%;
+    height: 520px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 8px 10px 10px black;
+    padding: 5px;
+    margin: 0 auto;
+}
+.cluster {
+    position: absolute;
+}
+.left_box {
+    background-color: #909090;
+    width: 10%;
+    height: 370px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 8px 10px 10px black;
+    padding: 5px;
+}
+.right_box {
+    background-color: #909090;
+    width: 10%;
+    height: 370px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 8px 10px 10px black;
+    padding: 5px;
+}
+.oeil_border {
+    border: 5px solid red;
+    border-radius: 5px;
+    padding: 3px;
+}
+.right_box img {
+    width: 58%;
+    margin-left: 21%;
+    margin-top: 5px;
+}
+.left_box img {
+    width: 46%;
+    margin-left: 23.5%;
+    margin-top: 3px;
+    margin-bottom: 6px;
+}
+#brick {
+    width: 120px;
+    height: 71px;
+    background-image: url('./resources/brick.jpg');
+    background-repeat: repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bottom_box {
+    position: absolute;
+    background-color: #53ff73;
+    width: 460px;
+    height: 140px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 8px 10px 10px black;
+    padding: 5px;
+    margin-left: -60px;
+    margin-top: 455px;
+}
+.bonjour {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.white_box {
+    position: absolute;
+    box-shadow: 1.5px 1.5px #ababac inset;
+    background-color: white;
+    width: 300px;
+    height: 11px;
+    border: 1px solid #cccccc;
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+.button {
+    position: absolute;
+    width: 70px;
+    height: 21.5px;
+    margin-top: -5px;
+    margin-left: 320px;
+}
+.text_shadow {
+    text-shadow: 4px 4px 4px #ff0000;
+}
+.entrez {
+    font-family: monospace;
+    font-size: 25px;
+}
+.repondre {
+    font-family: Arial, Helvetica, sans-serif;
+}

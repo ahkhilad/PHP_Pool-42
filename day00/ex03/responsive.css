@@ -1,5 +1,6 @@
 table{
-    border: inherit;
+    border: initial;
+    width: 100%;
 }
 .text{
     text-align: center;
@@ -49,10 +50,10 @@ table{
     background-color: #6ad0eb;
 }
 td{
-        width: 10vw;
-        height: 45px;
-        border: 1px solid black;
-        padding: 0px;
+    width: 10vw;
+    height: 45px;
+    border: 1px solid black;
+    padding: 0px;
 }
 body{
     background-image: url(https://xbooklet.com/img/package/a39bb570d93a552570203e9a51598637.jpg);
