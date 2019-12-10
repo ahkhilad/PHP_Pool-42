@@ -13,7 +13,7 @@ body {
 }
 .magnifier {
     position: absolute;
-    right: 40px;
+    right: 32px;
     bottom: -20px;
 }
 .reload {
@@ -28,13 +28,13 @@ body {
 }
 .center_boxes{
     margin: auto;
-    width: 1250px;
+    width: 1300px;
     margin-top: 20px;
     display: flex;
 }
 .cluster_box {
     background-color: #909090;
-    width: 74%;
+    width: 71.2%;
     height: 520px;
     border: none;
     border-radius: 10px;
@@ -53,6 +53,7 @@ body {
     border-radius: 10px;
     box-shadow: 8px 10px 10px black;
     padding: 5px;
+    margin-left: 18px;
 }
 .right_box {
     background-color: #909090;
@@ -62,6 +63,7 @@ body {
     border-radius: 10px;
     box-shadow: 8px 10px 10px black;
     padding: 5px;
+    margin-right: 18px;
 }
 .oeil_border {
     border: 5px solid red;
@@ -75,7 +77,7 @@ body {
 }
 .left_box img {
     width: 48%;
-    margin-left: 20%;
+    margin-left: 22%;
     margin-top: 0px;
     margin-bottom: 1px;
 }
