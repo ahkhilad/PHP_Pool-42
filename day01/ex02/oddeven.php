@@ -13,7 +13,19 @@ while (1)
     if (is_numeric($var)) 
     {
         $var = trim($var);
-        if (intval($var) % 2 === 0) 
+        if (strlen($var) >= 19)
+        {
+            $i = 19;
+            while ($i < strlen($var))
+            {
+                if (intval($var[$i]) % 2 === 0)
+                    $r = 1;
+                else
+                    $r = 0;
+                $i++;
+            }
+        }
+        if (intval($var) % 2 === 0 || $r == 1) 
         {
             echo "The number $var is even\n";
         }
