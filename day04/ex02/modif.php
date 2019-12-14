@@ -6,7 +6,7 @@ else
     $data = file_get_contents("../private/passwd");
     $data = unserialize($data);
     $i = 0;
-    foreach($data as $key => $user)
+    foreach($data as $user)
     {
         if ($user['login'] == $_POST['login'])
         {

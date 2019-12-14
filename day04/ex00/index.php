@@ -10,7 +10,7 @@ if ($_GET['submit'] == "OK")
     <form name="index.php" method="GET">
         Username: <input type="text" name="login" value="<?=$_SESSION['username']?>"/>
         <br />
-        Password: <input type="password" name="passwd" value="<?=$_SESSION['password']?>"/><br>
+        Password: <input type="password" name="passwd" value="<?=$_SESSION['password']?>"/>
         <input type="submit" name="submit" value="OK"/>
     </form>
 </body></html>
