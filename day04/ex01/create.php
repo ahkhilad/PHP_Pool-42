@@ -16,11 +16,11 @@ if ($_POST['submit'] === "OK")
             if ($user['login'] === $login)
                 exit("ERROR\n");
         }
-            $passwd = hash("Whirlpool", $passwd);
-            $tmp_user = array("login" => $login, "passwd" => $passwd);
-            $data[] = $tmp_user;
-            file_put_contents("../private/passwd", serialize($data));
-            echo $_POST['submit']."\n";
+        $passwd = hash("Whirlpool", $passwd);
+        $tmp_user = array("login" => $login, "passwd" => $passwd);
+        $data[] = $tmp_user;
+        file_put_contents("../private/passwd", serialize($data));
+        exit ($_POST['submit']."\n");
     }
     else
     {
@@ -28,7 +28,7 @@ if ($_POST['submit'] === "OK")
         $user = array("login" => $login, "passwd" => $passwd);
         $data = array($user);
         file_put_contents("../private/passwd", serialize($data));
-        echo $_POST['submit']."\n";
+        exit ($_POST['submit']."\n");
     }
 }
 ?>
