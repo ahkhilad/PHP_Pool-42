@@ -1,2 +1,3 @@
-SELECT REVERSE(RIGHT(`phone_number`, 9)) AS `rebmunenohp`
-FROM `distrib` WHERE `phone_number` LIKE '05%';
+SELECT REVERSE(TRIM(LEADING '0' FROM `phone_number`)) AS `rebmunenohp`
+FROM `distrib`
+WHERE `phone_number` LIKE '05%';
