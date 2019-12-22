@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Awesome Calculator</title>
+        <style>
+            .header {
+                color:#ff8300;
+                text-align: center;
+                text-shadow: -1px -1px 0 red;
+                font-size: 80px;
+                margin-bottom: 50px;
+            }
+            .first_input {
+                text-align: center;
+                margin-left: 9px;
+                margin-bottom: 5px;
+            }
+            .operator_input {
+                text-align: center;
+                margin-left: 15px;
+                margin-bottom: 5px;
+            }
+            .second_input {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .result {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="header">My Awesome Calculator</h1>
+        <div class="first_input" >
+            Left Member : <input type="text" id="num1">
+        </div>
+        <div class="operator_input">
+            <select id="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+        </div>
+        <div class="second_input">
+            Right Member : <input type="text" id="num2">
+        </div>
+        <div class="result">
+            <input type="submit" onclick="calculate_it()" value="Try me!">
+        </div>
+        <script>
+            function replace_it(str) {
+                str = str.replace(/\s/g,'');
+                return (str);
+            }
+            function calculate_it() {
+                var n1 = document.getElementById("num1").value;
+                var n2 = document.getElementById("num2").value;
+                var sel = document.getElementById("op");
+                var oper =sel.options[sel.selectedIndex].value;
+                num1 = Number(n1);
+                num2 = Number(n2);
+                n1 = replace_it(n1);
+                n2 = replace_it(n2);
+                if (n1 === "" || n2 === "")
+                {
+                    alert("Error :(");
+                    return;
+                }
+                if ((oper === "/" || oper === "%") && Number.isInteger(num2) && num2 === 0)
+                {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                }
+                if (num1 < 0 || num2 < 0)
+                    alert("Error :(");
+                if (!Number.isInteger(num1) || !Number.isInteger(num2))
+                    alert("Error :(")
+                else if (oper === "+" && num1 >= 0 && num2 >= 0)
+                {
+                    var result = num1 + num2;
+                    alert(result);
+                    console.log(result);
+                }
+                else if (oper === "-" && num1 >= 0 && num2 >= 0)
+                {
+                    result = num1 - num2;
+                    alert(result);
+                    console.log(result);
+                }
+                else if (oper === "*" && num1 >= 0 && num2 >= 0)
+                {    
+                    result = num1 * num2;
+                    alert(result);
+                    console.log(result);
+                }
+                else if (oper === "/" && num1 >= 0 && num2 > 0)
+                {
+                    result = num1 / num2;
+                    alert(result);
+                    console.log(result);
+                }
+                else if (oper === "%" && num1 >= 0 && num2 > 0)
+                {
+                    result = num1 % num2;
+                    alert(result);
+                    console.log(result);
+                }
+            }
+            function pop_reminder(){
+            alert("Please, use me...");
+            }
+            setInterval(function(){
+            pop_reminder()
+            }, 30000)
+        </script>
+    </body>
+</html>

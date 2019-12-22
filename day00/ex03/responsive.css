@@ -1,0 +1,60 @@
+table{
+    border: initial;
+    width: 100%;
+}
+.text{
+    text-align: center;
+    font-size: 2vw;
+}
+.bor{
+    border: none;
+}
+.atomic{
+    text-align: right;
+    margin-right: 1px;
+    font-size: 1vw;
+}
+.number{
+    text-align: left;
+    margin-left: 1px;
+    font-size: 1vw;
+}
+.neon_green{
+    background-color: #49fb35;
+}
+.light_orange{
+    background-color: #ffa500;
+}
+.light_yellow{
+    background-color: #fff448;
+}
+.light_red{
+    background-color: #e6b0aa;
+}
+.light_pink{
+    background-color: #fa8072;
+}
+.light_purple{
+    background-color: #fbc3ff;
+}
+.light_grey{
+    background-color: #cdcdcd;
+}
+.light_green{
+    background-color: #9fe1cb;
+}
+.green{
+    background-color: #71d997;
+}
+.light_blue{
+    background-color: #6ad0eb;
+}
+td{
+    width: 10vw;
+    height: 45px;
+    border: 1px solid black;
+    padding: 0px;
+}
+body{
+    background-image: url(https://xbooklet.com/img/package/a39bb570d93a552570203e9a51598637.jpg);
+}
