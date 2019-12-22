@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Balloon</title>
+        <style>
+            .balloon{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="balloon" id="B" onclick="expand_balloon()" onmouseleave="shrink_balloon()"></div>
+        <script>
+            var width_in = 200;
+            var height_in = 200;
+            var ball_col = "red";
+            function expand_balloon() {
+                if (width_in + 10 < 420)
+                {
+                    width_in += 10;
+                    height_in += 10;
+                }
+                else
+                {
+                    width_in = 200;
+                    height_in = 200;
+                }
+                document.getElementById("B").style.width = width_in + "px";
+                document.getElementById("B").style.height = height_in + "px";
+                if (ball_col == "red" && (width_in < 420 || height_in < 420))
+                {
+                    ball_col = "green";
+                    document.getElementById("B").style.backgroundColor = "green";
+                }
+                else if (ball_col == "green" && (width_in < 420 || height_in < 420))
+                {
+                    ball_col = "blue";
+                    document.getElementById("B").style.backgroundColor = "blue";
+                }
+                else if (ball_col == "blue" && (width_in < 420 || height_in < 420))
+                {
+                    ball_col = "red";
+                    document.getElementById("B").style.backgroundColor = "red";
+                }
+            }
+            function shrink_balloon() { 
+                if (ball_col == "red" && (width_in > 200 || height_in > 200))
+                {
+                    width_in -= 5;
+                    height_in -= 5;
+                    ball_col = "blue";
+                    document.getElementById("B").style.backgroundColor = "blue";
+                }
+                else if (ball_col == "blue" && (width_in > 200 || height_in > 200))
+                {
+                    width_in -= 5;
+                    height_in -= 5;
+                    ball_col = "green";
+                    document.getElementById("B").style.backgroundColor = "green";
+                }
+                else if (ball_col == "green" && (width_in > 200 || height_in > 200))
+                {
+                    width_in -= 5;
+                    height_in -= 5;
+                    ball_col = "red";
+                    document.getElementById("B").style.backgroundColor = "red";
+                }
+                document.getElementById("B").style.width = width_in + "px";
+                document.getElementById("B").style.height = height_in + "px";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Balloon</title>
+        <style>
+            .balloon{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="balloon" id="B"></div>
+        <script>
+            var width_in = 200;
+            var height_in = 200;
+            var ball_col = "red";
+            $( "#B" ).click(function() {
+                if (width_in + 10 < 420)
+                {
+                    width_in += 10;
+                    height_in += 10;
+                }
+                else
+                {
+                    width_in = 200;
+                    height_in = 200;
+                }
+                $("#B").width(width_in);
+                $("#B").height(height_in);
+                if (ball_col == "red" && (width_in < 420 || height_in < 420))
+                {
+                    ball_col = "green";
+                    $("#B").css("background-color","green");
+                }
+                else if (ball_col == "green" && (width_in < 420 || height_in < 420))
+                {
+                    ball_col = "blue";
+                    $("#B").css("background-color","blue");
+                }
+                else if (ball_col == "blue" && (width_in < 420 || height_in < 420))
+                {
+                    ball_col = "red";
+                    $("#B").css("background-color","red");
+                }
+            });
+            $( "#B" ).mouseleave(function() { 
+                if (ball_col == "red" && (width_in > 200 || height_in > 200))
+                {
+                    width_in -= 5;
+                    height_in -= 5;
+                    ball_col = "blue";
+                    $("#B").css("background-color","blue");
+                }
+                else if (ball_col == "blue" && (width_in > 200 || height_in > 200))
+                {
+                    width_in -= 5;
+                    height_in -= 5;
+                    ball_col = "green";
+                    $("#B").css("background-color","green");
+                }
+                else if (ball_col == "green" && (width_in > 200 || height_in > 200))
+                {
+                    width_in -= 5;
+                    height_in -= 5;
+                    ball_col = "red";
+                    $("#B").css("background-color","red");
+                }
+                $("#B").width(width_in);
+                $("#B").height(height_in);
+            });
+        </script>
+    </body>
+</html>
